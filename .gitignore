@@ -2,9 +2,7 @@
 *.log
 *.pot
 *.pyc
-**/__pycache__/
-**/migration/
-
+__pycache__
 db.sqlite3
 media
 
@@ -85,7 +83,7 @@ nosetests.xml
 coverage.xml 
 *.cover 
 .hypothesis/ 
-
+**/__pycache__/
 
 # Jupyter Notebook 
 .ipynb_checkpoints 
