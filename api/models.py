@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+# authentication
+# List Of cars according to city
+# detail of card
+# kyc of car owner

@@ -37,9 +37,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
 ]
 # downloaded application
-INSTALLED_APPS+=["rest_framework",]
+INSTALLED_APPS+=[
+    'rest_framework',
+    'rest_framework.authtoken',
+    'dj_rest_auth',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'dj_rest_auth.registration',
+
+]
 
 # created application
 INSTALLED_APPS+=["api",]
@@ -85,6 +96,11 @@ DATABASES = {
     }
 }
 
+# Authentication Settings 
+
+ACCOUNT_AUTHENTICATION_METHOD = "username"
+ACCOUNT_EMAIL_VERIFICATION = "none"
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -126,3 +142,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# All-auth Site Id
+SITE_ID = 1
+
+# Email Configuration
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "urbanspacerealtors.rkl@gmail.com"
+EMAIL_HOST_PASSWORD = "kjmlexqlshxaytog"
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'UltraCreation Team <noreply@onlinewebsitemarket.com>'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
