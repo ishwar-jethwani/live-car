@@ -49,6 +49,7 @@ INSTALLED_APPS+=[
     'allauth.account',
     'allauth.socialaccount',
     'dj_rest_auth.registration',
+    'phonenumber_field',
 
 ]
 
@@ -97,18 +98,20 @@ DATABASES = {
 }
 
 # Authentication Settings 
-
+LOGIN_REDIRECT_URL = "auth/login/"
 ACCOUNT_AUTHENTICATION_METHOD = "username"
 ACCOUNT_EMAIL_VERIFICATION = "none"
+ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = LOGIN_REDIRECT_URL
+
 
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    # },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
