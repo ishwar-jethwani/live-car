@@ -2,7 +2,7 @@ from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 from django.db.models.signals import pre_save
 from .utils import *
-
+from django.contrib.auth.models import User
 # authentication
 # List Of cars according to city
 # detail of card
@@ -10,6 +10,7 @@ from .utils import *
 
 
 class CarOwner(models.Model):
+    user                = models.OneToOneField(User,on_delete=models.CASCADE)
     fname               = models.CharField(max_length=60,verbose_name="First Name",blank=True,null=True)
     lname               = models.CharField(max_length=60,verbose_name="Last Name",blank=True,null=True)
     adharcard_no        = models.CharField(max_length=12,verbose_name="AdharCard Number",unique=True,blank=True,null=True)
