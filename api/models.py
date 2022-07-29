@@ -23,6 +23,7 @@ class CarOwner(models.Model):
     state               = models.CharField(max_length=20,verbose_name="State Name",blank=True,null=True)
     image_of_car        = models.URLField(blank=True,null=True,verbose_name="image of car")
     img                 = models.URLField(blank=True,null=True,verbose_name="Profile Image")
+    verified            = models.BooleanField(default=False)
     timestamp           = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:

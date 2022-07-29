@@ -152,8 +152,8 @@ SITE_ID = 1
 # Email Configuration
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "urbanspacerealtors.rkl@gmail.com"
-EMAIL_HOST_PASSWORD = "kjmlexqlshxaytog"
+EMAIL_HOST_USER = "onlinewebsitemarket@gmail.com"
+EMAIL_HOST_PASSWORD = "weckbhyqcfcepjtn"
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'UltraCreation Team <noreply@onlinewebsitemarket.com>'
+DEFAULT_FROM_EMAIL = 'UltraTeam Team <noreply@onlinewebsitemarket.com>'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

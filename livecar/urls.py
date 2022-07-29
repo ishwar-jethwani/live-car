@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from .views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/", include("api.urls")),
     path("auth/", include('dj_rest_auth.urls')),
-    path('register/', include('dj_rest_auth.registration.urls'))
+    path('register/', include('dj_rest_auth.registration.urls')),
+    path("email_verification/",EmailVerification.as_view(),name="email_verification")
+
 ]
